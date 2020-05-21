@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .login {
+        width: 20%;
+        padding: 25px;
+        &-form {
+            display: flex;
+            flex-flow: column;
+            mat-form-field {
+                margin-bottom: 10px;
+            }
+        }
+        &-ctas {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
