@@ -15,9 +15,9 @@ export class LoginComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('mock-api/users.json').subscribe((res: any) => {
-      console.log(res);
-    });
+    // this.http.get('mock-api/users.json').subscribe((res: any) => {
+    //   console.log(res);
+    // });
   }
 
 }
