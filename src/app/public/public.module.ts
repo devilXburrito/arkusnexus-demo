@@ -4,7 +4,10 @@ import { PublicRoutingModule } from './public-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
 // components
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components';
+
+// services
+import { LoginService } from './services';
 
 
 
@@ -13,6 +16,9 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     PublicRoutingModule,
     SharedModule
+  ],
+  providers: [
+    LoginService
   ]
 })
 export class PublicModule { }
