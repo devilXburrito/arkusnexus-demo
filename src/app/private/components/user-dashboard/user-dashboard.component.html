@@ -1,2 +1,14 @@
-<h3>Loading your awesome dashboard, hang in there !</h3>
-<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<ng-container *ngIf="loading; else content">
+    <h3>Loading your awesome dashboard, hang in there !</h3>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-container>
+
+<ng-template #content>
+    <div class="chart-wrapper">
+        <mat-card *ngFor="let chart of charts" class="chart-holder">
+            <div echarts [initOpts]="lineChartOpts" [options]="chart" style="height: auto;"></div>
+        </mat-card>
+    </div>
+</ng-template>
+
+

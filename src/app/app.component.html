@@ -1,12 +1,14 @@
 <div class="main-bar">
-  <mat-icon class="main-bar_menu-trigger" (click)="sidenav.toggle()" aria-hidden="false" aria-label="menu">menu</mat-icon>
-  <h3  style="color: #fff"*ngIf="currentUser; else appName">Welcome {{ currentUser?.name }}</h3>
-  <ng-template #appName><h3 style="color: #fff">ArkusNexus demo app</h3></ng-template>
+  <ng-container *ngIf="currentUser; else appName">
+    <mat-icon class="main-bar_menu-trigger" (click)="sidenav.toggle()" aria-hidden="false" aria-label="menu">menu</mat-icon>
+    <h3 style="color:#fff">Welcome {{ currentUser?.name }}</h3>
+  </ng-container>
+  <ng-template #appName><h3 style="color:#fff; margin-left: 35px;">ArkusNexus demo app</h3></ng-template>
 </div>
 <mat-sidenav-container class="main-layout" [hasBackdrop]="true">
   <mat-sidenav #sidenav class="main-layout_sidenav" mode="over">
     <mat-nav-list>
-      <a mat-list-item *ngFor="let route of ['public', 'private']" [routerLink]="route" routerLinkActive="active">{{ route | titlecase }}</a>
+      <a mat-list-item *ngFor="let route of ['private']" [routerLink]="route" routerLinkActive="active">{{ route | titlecase }}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="main-layout_content">  
