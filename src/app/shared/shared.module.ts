@@ -13,10 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
-
-
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   exports: [
     CommonModule,
     HttpClientModule,
@@ -29,7 +28,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     ReactiveFormsModule,
     MatButtonModule,
     MatListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,14 @@
+:host {
+    display: block;
+    padding: 50px 0;
+    .chart {
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-holder {
+            width: 30%;
+            min-height: 250px;
+        }
+    }
+}
